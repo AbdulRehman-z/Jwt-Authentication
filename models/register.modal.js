@@ -1,12 +1,14 @@
 import { User } from "./user.js";
-import { issueJWT } from "../lib/utils.js";
-
-// const DEFAULT_ID = 0;
 
 export const isUserExists = async (user) => {
   return await User.findOne({ username: user.username });
 };
 
+/**
+ * -------------- Trash Code ----------------
+ */
+
+// const DEFAULT_ID = 0;
 // const saveUser = async (user) => {
 //   const user = new User(...user);
 

@@ -1,15 +1,11 @@
 import express from "express";
-import passport from "passport";
+import { authenticateJwt } from "../lib/utils.js";
 
 export const protectedRouter = express.Router();
 
-protectedRouter.get(
-  "/",
-  passport.authenticate("jwt", { session: false }),
-  (req, res, next) => {
-    res.json({
-      success: true,
-      message: "You are successfully authenticated",
-    });
-  }
-);
+protectedRouter.get("/", authenticateJwt, (req, res, next) => {
+  res.json({
+    success: true,
+    message: "You are successfully authenticated",
+  });
+});
