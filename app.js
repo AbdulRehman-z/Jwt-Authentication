@@ -8,6 +8,7 @@ dotenv.config();
 import { passportConfig } from "./config/passport.js";
 import { registerRouter } from "./routes/register.router.js";
 import { loginRouter } from "./routes/login.router.js";
+import { protectedRouter } from "./routes/protectedRoute.router.js";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -45,3 +46,4 @@ app.use(express.static(path.join(__dirname, "public")));
 // Imports all of the routes from ./routes/index.js
 app.use("/register", registerRouter);
 app.use("/login", loginRouter);
+app.use("/protected", protectedRouter);

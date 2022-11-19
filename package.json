@@ -1,14 +1,14 @@
 {
-  "name": "jwt-auth",
+  "name": "react",
   "version": "1.0.0",
-  "description": "",
+  "description": "The patterns shown in this repository are meant for educational purposes.  While this is sufficiently secure to use for personal projects, there are considerations not mentioned in this tutorial series that should be explored for an enterprise-grade implementation.",
   "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Abdul Rehman",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
@@ -18,5 +18,17 @@
     "morgan": "^1.10.0",
     "passport": "^0.6.0",
     "passport-jwt": "^4.0.0"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbdulRehmanConqueror/Jwt-Authentication-React.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AbdulRehmanConqueror/Jwt-Authentication-React/issues"
+  },
+  "homepage": "https://github.com/AbdulRehmanConqueror/Jwt-Authentication-React#readme"
 }

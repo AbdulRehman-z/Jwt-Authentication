@@ -1,5 +1,15 @@
 import express from "express";
+import passport from "passport";
 
-const protectedRouter = express.Router();
+export const protectedRouter = express.Router();
 
-protectedRouter.post("/protected", () => {});
+protectedRouter.get(
+  "/",
+  passport.authenticate("jwt", { session: false }),
+  (req, res, next) => {
+    res.json({
+      success: true,
+      message: "You are successfully authenticated",
+    });
+  }
+);
